@@ -57,7 +57,8 @@ function wrongMessager() {
 }
 
 function tweetMe(path) {
-  var entry = IPython.notebook.get_selected_cell().get_text();
+  var raw_entry = IPython.notebook.get_selected_cell().get_text();
+  var entry = raw_entry.split("\n").join(" ");
   if (entry.length == 0) {
     zeroMessager(); 
   }
