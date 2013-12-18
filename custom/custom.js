@@ -13,6 +13,12 @@ requirejs.config({
 
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
 
+     require(['custom/spellchecker/main'],function(spellchecker){
+       // spellchecker.parameters('just a dummy argument to pass if necessary');
+       spellchecker.parameters('dummy');
+       console.log('Spellcheck extension loaded correctly');
+     });
+
      require(['custom/tweet_me/main'],function(tweet_me){
        // tweet_me.parameters('twitter helper function directory');
        tweet_me.parameters('/home/damian/.ipython/profile_myext/static/custom/tweet_me');
