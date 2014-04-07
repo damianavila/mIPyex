@@ -13,6 +13,18 @@ requirejs.config({
 
 $([IPython.events]).on('app_initialized.NotebookApp', function(){
 
+     require(['custom/loader/main'],function(loader){
+       // loader.parameters('just a dummy argument to pass if necessary');
+       loader.parameters('dummy');
+       console.log('Loader extension loaded correctly');
+     });
+
+     require(['custom/writer/main'],function(writer){
+       // writer.parameters('just a dummy argument to pass if necessary');
+       writer.parameters('dummy');
+       console.log('Writer extension loaded correctly');
+     });
+
      require(['custom/spellchecker/main'],function(spellchecker){
        // spellchecker.parameters('just a dummy argument to pass if necessary');
        spellchecker.parameters('dummy');

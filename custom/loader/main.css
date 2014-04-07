@@ -1,0 +1,6 @@
+textarea {
+width: auto;
+}
+select, input[type="file"] {
+line-height: 0px;
+}
