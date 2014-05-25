@@ -16,12 +16,16 @@ function writerCSS() {
     document.getElementsByTagName("head")[0].appendChild(link);
 }
 
-function writer(dummy) {
+function writer(header) {
 
     writerCSS();
 
     var preInput = IPython.notebook.get_selected_cell().get_text();
-    var input = preInput.split('\n').slice(4).join('\n');
+    if (header) {
+        var input = preInput.split('\n').slice(4).join('\n');
+    } else {
+        var input = preInput;
+    };
 
     var textarea = $('<textarea/>')
         .attr('rows','1')

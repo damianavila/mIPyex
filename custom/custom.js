@@ -20,8 +20,8 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
      });
 
      require(['custom/writer/main'],function(writer){
-       // writer.parameters('just a dummy argument to pass if necessary');
-       writer.parameters('dummy');
+       // writer.parameters('header');
+       writer.parameters('True');
        console.log('Writer extension loaded correctly');
      });
 
