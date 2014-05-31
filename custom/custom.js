@@ -21,7 +21,7 @@ $([IPython.events]).on('app_initialized.NotebookApp', function(){
 
      require(['custom/writer/main'],function(writer){
        // writer.parameters('header');
-       writer.parameters('True');
+       writer.parameters(true);
        console.log('Writer extension loaded correctly');
      });
 
